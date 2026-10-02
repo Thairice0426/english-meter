@@ -1,0 +1,26 @@
+{
+  "name": "English Level Meter",
+  "short_name": "English Meter",
+  "description": "英語力診断・文法特訓・英単語・共通テスト風模試をオフラインで学習できるアプリ",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f6fb",
+  "theme_color": "#3159d8",
+  "orientation": "any",
+  "lang": "ja",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
