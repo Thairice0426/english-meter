@@ -1,0 +1,112 @@
+English Level Meter v16 — 20-persona PDCA report (final)
+====================================================================
+Final listening bank: 1,200 original TOEIC Part 2-style questions
+Important: actual TOEIC questions were not copied; these are original practice items inspired by the Question–Response format.
+
+PDCA ROUND 1
+- 20 personas reviewed the v15/v16 draft.
+- Major findings: text choices were too visible; TTS selection was simplistic; 40 questions were insufficient.
+- Action: audio-only A/B/C answering, natural-voice preference, accent selector, >1,000 questions.
+
+PDCA ROUND 2 — each persona opinion after implementation
+01. TOEIC Part 2教材設計者
+    Opinion : 回答中に英文が見えると読解になる。
+    Fix     : A/B/Cだけ表示し、Question→A→B→Cを音声で連続再生。
+    Recheck : PASS
+02. 英国人英語講師
+    Opinion : 英国英語の高品質音声を優先してほしい。
+    Fix     : en-GB選択時にNatural/Neural/Google/Microsoft等を優先。
+    Recheck : PASS
+03. 米国人英語講師
+    Opinion : 米語も選べる必要がある。
+    Fix     : en-US切替を追加。
+    Recheck : PASS
+04. 音声学トレーナー
+    Opinion : 人工的なpitch変更は不自然。
+    Fix     : pitch=1.0、基準rate=0.97で音声エンジン本来の韻律を利用。
+    Recheck : PASS
+05. Web Speech APIエンジニア
+    Opinion : getVoices初期空配列対策が必要。
+    Fix     : voiceschanged＋遅延refresh＋フォールバック。
+    Recheck : PASS
+06. Android PWAエンジニア
+    Opinion : 端末ごとに音声名が異なる。
+    Fix     : 名前固定をやめスコアリング選択。
+    Recheck : PASS
+07. モバイルUI設計者
+    Opinion : 選択肢長文は画面を占有する。
+    Fix     : 大きいA/B/Cボタンのみ。
+    Recheck : PASS
+08. アクセシビリティ担当
+    Opinion : 再生状態を支援技術へ通知したい。
+    Fix     : aria-labelとaria-live statusを追加。
+    Recheck : PASS
+09. QAエンジニア
+    Opinion : 第1巡の自動生成に不自然な組合せがあった。
+    Fix     : クロス積生成を廃止し、全1,200問をscenario-locked Q/Aから生成。
+    Recheck : PASS
+10. 試験問題校閲者
+    Opinion : "the the"など自動生成の文法事故を排除すべき。
+    Fix     : 禁止パターン検査＋scenario-locked文面へ再構築。
+    Recheck : PASS
+11. ビジネス英語講師
+    Opinion : 調達だけでなく一般業務場面も必要。
+    Fix     : 会議・品質・物流・出張・事務を分散。
+    Recheck : PASS
+12. 日常英会話講師
+    Opinion : 日常場面も必要。
+    Fix     : 交通・ホテル・店・観光・紛失物等を収録。
+    Recheck : PASS
+13. 初中級学習者
+    Opinion : 直接応答を十分入れて段階的にしたい。
+    Fix     : 標準カテゴリを多数収録。
+    Recheck : PASS
+14. 上級学習者
+    Opinion : 間接応答をもっと入れてほしい。
+    Fix     : Indirectカテゴリを60問収録。
+    Recheck : PASS
+15. 学習プロダクト担当
+    Opinion : 同カテゴリ連続を避けたい。
+    Fix     : balancedListeningSampleでカテゴリ分散。
+    Recheck : PASS
+16. パフォーマンス担当
+    Opinion : 1,200問を一度にDOM化しないこと。
+    Fix     : データのみ保持し1問ずつ描画。
+    Recheck : PASS
+17. オフライン担当
+    Opinion : 自然音声は端末依存であることを明記すべき。
+    Fix     : 注意書きと未対応フォールバックを維持。
+    Recheck : PASS
+18. データ整合性担当
+    Opinion : Q重複、選択肢重複は致命的。
+    Fix     : 1,200/1,200一意、全問3応答一意をビルド検査。
+    Recheck : PASS
+19. テスト戦略担当
+    Opinion : カテゴリ偏りを検査したい。
+    Fix     : 20カテゴリ×60問＝均等1,200問。
+    Recheck : PASS
+20. 実利用者レビュー役
+    Opinion : 再生操作は1タップで完結してほしい。
+    Fix     : Question→A→B→Cを1タップ連続再生。
+    Recheck : PASS
+
+Automated checks
+- Total items: 1,200
+- Categories: 20
+- Items/category: 60 each
+- Session sampling: category-balanced + per-category randomized PASS
+- Unique prompts: 1,200/1,200 PASS
+- Unique IDs: 1,200/1,200 PASS
+- Exactly 1 best response + 2 distinct distractors: PASS
+- Cross-scenario answer mixing: REMOVED
+- Known bad patterns ("the the", plural+"is" generator bug): PASS
+- Prompt/response text hidden until answer: PASS
+- en-GB/en-US/Auto selector: PASS
+- Natural voice scoring/fallback: PASS
+- Full Question→A→B→C replay limit: PASS
+
+Release gate
+- Critical open: 0
+- High open: 0
+- Round-2 bug found and fixed: per-category shuffle result was not assigned, causing repeated subsets; now fixed and rechecked.
+- Residual limitation: perceived TTS naturalness depends on the speech voices installed/provided by the device/browser.

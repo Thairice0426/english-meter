@@ -1,7 +1,7 @@
 {
-  "name": "English Level Meter",
+  "name": "English Level Meter v17",
   "short_name": "English Meter",
-  "description": "英語力診断・文法特訓・英単語・共通テスト風模試をオフラインで学習できるアプリ",
+  "description": "英語力診断・文法特訓・英単語・共通テスト風模試・TOEIC Part 2型リスニングを学習できるアプリ",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

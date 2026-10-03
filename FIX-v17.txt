@@ -1,0 +1,10 @@
+English Level Meter v17 - PC readability fix
+
+- Explicit foreground colors for tabs, grammar/vocabulary/listening controls and answer choices.
+- Fixed white-text-on-white-background risk caused by browser/OS form-control colors.
+- Fixed high-contrast mode surfaces so foreground/background always match.
+- Fixed pronunciation button background variable.
+- Fixed desktop 5-tab layout.
+- Fixed grammar trainer header overlap around the streak counter.
+- Bumped PWA service-worker cache from v16 to v17 so old CSS is replaced after update.
+- Chromium desktop validation: no visible button/select/input under 3.0 contrast ratio in normal or high-contrast mode.

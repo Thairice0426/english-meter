@@ -1,4 +1,4 @@
-const CACHE = 'english-meter-v13-shell';
+const CACHE = 'english-meter-v17-shell';
 const ASSETS = [
   './',
   './index.html',

@@ -1,4 +1,4 @@
-English Level Meter v13 App — インストール方法
+English Level Meter v14 App — インストール方法
 
 この版はPWA（Progressive Web App）です。
 HTTPSで公開したURLをスマホで開くと、普通のアプリのようにホーム画面へインストールできます。
