@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#111827">
-<title>Language Level Meter v20 App</title>
+<title>Language Level Meter v21 App</title>
 <style>
 :root{--bg:#f3f5f8;--card:#fff;--text:#101828;--muted:#667085;--line:#dfe3e8;--accent:#3157d5;--accent2:#eef2ff;--good:#147a48;--bad:#b42318}
 *{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",Arial,sans-serif}button,select{font:inherit}.app{max-width:900px;margin:0 auto;padding:18px 14px 50px}.header{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:14px}h1{font-size:25px;margin:0 0 4px}.subtitle{font-size:13px;color:var(--muted);line-height:1.55}.pill{font-size:12px;font-weight:800;border:1px solid #cfd7f8;background:#eef2ff;color:#2642aa;border-radius:999px;padding:7px 10px;white-space:nowrap}.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}.tab{border:1px solid var(--line);background:#fff;border-radius:13px;padding:11px;font-weight:800;cursor:pointer}.tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}.panel{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 8px 26px rgba(16,24,40,.05)}.hero{padding:24px}.hero h2{font-size:27px;margin:0 0 10px}.hero p{color:var(--muted);line-height:1.7;margin:7px 0}.modegrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}.mode{border:1px solid var(--line);border-radius:16px;padding:16px;background:#fff;text-align:left;cursor:pointer}.mode.selected{border:2px solid var(--accent);background:var(--accent2)}.mode b{display:block;font-size:17px;margin-bottom:5px}.mode span{font-size:12px;color:var(--muted)}.primary{border:0;border-radius:14px;background:var(--accent);color:white;padding:14px 18px;font-weight:800;cursor:pointer;width:100%}.secondary{border:1px solid var(--line);border-radius:12px;background:#fff;padding:11px 14px;font-weight:700;cursor:pointer}.secondary:disabled{opacity:.45}.notice{font-size:12px;color:var(--muted);line-height:1.6;margin-top:13px}.hidden{display:none!important}.topline{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px}.progress{height:8px;background:#e7eaf0;border-radius:99px;overflow:hidden}.progress div{height:100%;background:var(--accent);transition:.2s}.meta{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin:8px 2px 14px}.qcard{padding:20px}.skill{display:inline-block;font-size:11px;font-weight:800;color:#334ab2;background:#eef1ff;padding:5px 8px;border-radius:999px;margin-bottom:12px}.passage{background:#f8fafc;border:1px solid #e7eaf0;border-radius:14px;padding:14px;line-height:1.7;margin-bottom:17px;font-size:15px}.question{font-size:21px;font-weight:750;line-height:1.5;margin-bottom:16px}.choices{display:grid;gap:9px}.choice{border:1px solid var(--line);background:#fff;border-radius:13px;padding:13px 14px;text-align:left;cursor:pointer;line-height:1.45}.choice.selected{border:2px solid var(--accent);background:#f4f6ff}.choice.correct{border:2px solid var(--good);background:#eefaf3}.choice.wrong{border:2px solid var(--bad);background:#fff1f0}.choice:disabled{cursor:default}.explainbox{margin-top:13px;background:#f8fafc;border:1px solid var(--line);border-radius:13px;padding:13px;line-height:1.65;font-size:14px}.explainbox.good{border-color:#9fd0b4;background:#f1fbf5}.explainbox.bad{border-color:#efb2ac;background:#fff5f4}.qnav{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:13px}.resultHero{text-align:center;padding:26px 16px 18px}.resultHero .cefr{font-size:56px;font-weight:900;letter-spacing:-2px}.resultHero .leveldesc{color:var(--muted);margin-top:2px}.scoregrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}.scorebox{background:#f8fafc;border:1px solid var(--line);border-radius:16px;padding:15px;text-align:center}.scorebox span{display:block;color:var(--muted);font-size:12px}.scorebox b{font-size:28px;display:block;margin:4px 0}.scorebox small{color:var(--muted)}.sectiontitle{font-size:16px;font-weight:850;margin:22px 0 10px}.skillrow{display:grid;grid-template-columns:92px 1fr 48px;gap:10px;align-items:center;margin:11px 0}.bar{height:9px;background:#e7eaf0;border-radius:99px;overflow:hidden}.bar div{height:100%;background:var(--accent)}.skillrow b{font-size:13px}.skillrow span{font-size:12px;text-align:right;color:var(--muted)}.advice{background:#fff9e8;border:1px solid #f1dc99;border-radius:14px;padding:14px;line-height:1.65}.answerlist{display:grid;gap:10px}.review{border:1px solid var(--line);border-radius:14px;padding:13px;background:#fff}.review.correct{border-left:5px solid var(--good)}.review.wrong{border-left:5px solid var(--bad)}.review .rq{font-weight:750;line-height:1.45}.review .ans{font-size:13px;margin-top:7px;line-height:1.55}.review .ex{font-size:12px;color:var(--muted);margin-top:5px;line-height:1.55}.history{display:grid;gap:8px}.hist{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:8px 0;font-size:13px}details summary{cursor:pointer;font-weight:800}details p,details li{font-size:12px;color:var(--muted);line-height:1.65}.trainerhead{display:grid;grid-template-columns:1.2fr 110px 150px auto;gap:10px;align-items:end;margin-bottom:12px}.trainerhead label{font-size:12px;color:var(--muted);display:block;margin-bottom:4px}select{border:1px solid var(--line);border-radius:10px;padding:10px;background:#fff}.streak{font-weight:900;font-size:18px;text-align:right}.mini{font-size:12px;color:var(--muted)}.trainstats{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}.chip{background:#f8fafc;border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-size:12px}@media(max-width:600px){.modegrid,.scoregrid{grid-template-columns:1fr}.question{font-size:19px}.resultHero .cefr{font-size:48px}.trainerhead{grid-template-columns:1fr}}
@@ -175,7 +175,7 @@ body.high-contrast .secondary.active{background:#44370f;color:#ffeaa0;-webkit-te
 @media(max-width:760px){.de-setup{grid-template-columns:1fr 1fr}.de-dashboard{grid-template-columns:1fr 1fr}.de-head{grid-template-columns:1fr}.de-total{justify-self:start}.tabs{grid-template-columns:1fr 1fr}.tab{min-height:48px}}
 
 
-/* v20 German TTS quality controls */
+/* v21 German TTS compatibility controls */
 .de-voice-panel{display:grid;grid-template-columns:minmax(220px,1fr) auto;gap:10px 12px;align-items:end;margin:0 0 12px;padding:12px;background:#f8fafc;border:1px solid var(--line);border-radius:14px}.de-voice-main label{display:block;font-size:12px;font-weight:800;margin-bottom:5px}.de-voice-main select{width:100%}.de-voice-actions{display:flex;gap:8px;flex-wrap:wrap}.de-voice-actions button{white-space:nowrap}.de-voice-quality{grid-column:1/-1;line-height:1.45}.de-voice-quality.good{color:#087443;font-weight:700}.de-voice-quality.warn{color:#9a5a00;font-weight:700}.de-voice-quality.bad{color:#b42318;font-weight:700}
 @media(max-width:760px){.de-voice-panel{grid-template-columns:1fr}.de-voice-actions{grid-column:1}.de-voice-actions button{flex:1}.de-voice-quality{grid-column:1}}
 </style><link rel="manifest" href="./manifest.webmanifest">
@@ -188,7 +188,7 @@ body.high-contrast .secondary.active{background:#44370f;color:#ffeaa0;-webkit-te
 </head>
 <body><div class="app">
 <div class="header">
-  <div><h1>Language Level Meter v20 App</h1><div class="subtitle">英語力診断 + 共通テスト風 + 文法 + 単語 + リスニング + ドイツ語 / 発音対応・PWA・SRS</div></div>
+  <div><h1>Language Level Meter v21 App</h1><div class="subtitle">英語力診断 + 共通テスト風 + 文法 + 単語 + リスニング + ドイツ語 / 発音対応・PWA・SRS</div></div>
   <div class="headtools">
     <div class="pill">完全オフライン*</div>
     <button id="fontDown" class="tinybtn" title="文字を小さく">A−</button>
@@ -497,7 +497,8 @@ body.high-contrast .secondary.active{background:#44370f;color:#ffeaa0;-webkit-te
       <div class="qnav"><button id="deSkip" class="secondary">スキップ</button><button id="deNext" class="primary" disabled>次の問題</button></div>
     </div>
     <div id="deResult" class="hidden resultHero"><div class="cefr" id="dePct">—</div><div class="leveldesc">今回の正答率</div><div id="deResultMsg" class="notice"></div><button id="deAgain" class="primary" style="margin-top:14px">もう一度</button></div>
-    <div class="notice">ドイツ語は「自動」で端末内の German / Deutsch 音声から高品質候補を優先します。声が不自然なら「ドイツ語の声」から別の音声を選び、「声を試す」で比較できます。ドイツ語音声が1つも検出されない場合は、誤った言語の声で無理に読み上げません。</div>
+    <div class="notice">ドイツ語は「自動」で German / Deutsch 音声を優先します。Chrome が音声一覧にドイツ語を表示しない端末でも、<b>de-DE を指定したブラウザ自動音声</b>で再生を試します。端末の表示言語に Deutsch を追加することと、TTS（テキスト読み上げ）のドイツ語音声データを追加することは別です。</div>
+    <div class="mini" style="margin:-4px 0 12px">Androidで再生できない場合：設定内の「テキスト読み上げ / Text-to-speech」→ 使用中のTTSエンジン → 音声データ/言語から German (Deutsch) を追加してください。機種によって項目名は異なります。</div>
   </section>
 </div>
 
@@ -521,7 +522,7 @@ function wireGlobalUI(){
   $('resetAllBtn').onclick=()=>{if(confirm('診断履歴・文法履歴・単語学習記録・ドイツ語学習記録・苦手記録・途中セッションを初期化しますか？\n1万語バンク本体とマイ単語は残します。')){[
     'english_level_meter_history_v2','english_vocab_progress_v8','english_vocab_progress_v7','english_vocab_progress_v6',
     'professional_vocab_mistakes_v2','english_vocab_settings_v7','english_vocab_settings_v8',
-    'diagnosis_session_v8','grammar_session_v8','vocab_session_v8','common_test_mock_session_v10','common_test_mock_session_v11','common_test_mock_history_v11','common_test_last_form_v11','diagnostic_seen_v9','grammar_progress_v9','german_progress_v19','german_voice_v20'
+    'diagnosis_session_v8','grammar_session_v8','vocab_session_v8','common_test_mock_session_v10','common_test_mock_session_v11','common_test_mock_history_v11','common_test_last_form_v11','diagnostic_seen_v9','grammar_progress_v9','german_progress_v19','german_voice_v21'
   ].forEach(k=>localStorage.removeItem(k));alert('学習記録を初期化しました。');location.reload();}}
 }
 
@@ -1521,7 +1522,7 @@ function rankedEnglishVoices(lang=getPreferredLang()){if(!('speechSynthesis' in 
 function refreshSpeechVoices(){const vs=rankedEnglishVoices();speechVoice=vs[0]||null;speechVoiceAlt=vs.find(v=>v!==speechVoice&&v.lang===speechVoice?.lang)||vs[1]||speechVoice||null}
 function makeUtterance(text,rate=1,voice=null,lang=null){const u=new SpeechSynthesisUtterance(String(text||'').replace(/\s+/g,' ').trim());u.lang=lang||voice?.lang||getPreferredLang();u.rate=Math.max(.7,Math.min(1.2,(Number(rate)||1)*.97));u.pitch=1;u.volume=1;if(voice)u.voice=voice;return u}
 function speakEnglish(text,rate=1){text=String(text||'').replace(/\s+/g,' ').trim();if(!text)return false;if(!('speechSynthesis' in window)){alert('この端末では音声読み上げを利用できません。');return false}refreshSpeechVoices();speechSynthesis.cancel();speechSynthesis.speak(makeUtterance(text,rate,speechVoice));return true}
-if('speechSynthesis' in window){speechSynthesis.onvoiceschanged=()=>{refreshSpeechVoices();if(document.getElementById('deVoiceSelect'))refreshGermanVoiceUI(true)};setTimeout(()=>{refreshSpeechVoices();if(document.getElementById('deVoiceSelect'))refreshGermanVoiceUI(true)},100)}
+if('speechSynthesis' in window){speechSynthesis.onvoiceschanged=()=>{refreshSpeechVoices();if(document.getElementById('deVoiceSelect')){refreshGermanVoiceUI(true);refreshGermanVoicesAsync(false)}};setTimeout(()=>{refreshSpeechVoices();if(document.getElementById('deVoiceSelect'))refreshGermanVoicesAsync(false)},100)}
 function addSpeakBar(host,items){if(!host)return;host.querySelectorAll('.pronouncebar').forEach(x=>x.remove());const valid=items.filter(x=>x&&x.text&&/[A-Za-z]/.test(x.text));if(!valid.length)return;const bar=document.createElement('div');bar.className='pronouncebar';valid.slice(0,3).forEach(x=>{const b=document.createElement('button');b.className='speakbtn';b.type='button';b.textContent='🔊 '+x.label;b.onclick=()=>speakEnglish(x.text);bar.appendChild(b)});host.appendChild(bar)}
 function refreshPronunciation(){
   if(!$('diagnosisPane').classList.contains('hidden')&&!$('test').classList.contains('hidden')){const q=testQ[pos];if(q)addSpeakBar($('question').parentElement,[q.passage&&{label:'本文を発音',text:q.passage},{label:'問題を発音',text:q.q}])}
@@ -1572,7 +1573,7 @@ function deLoadProgress(){try{return JSON.parse(localStorage.getItem(DE_PROGRESS
 function deSaveProgress(p){try{localStorage.setItem(DE_PROGRESS,JSON.stringify(p))}catch(e){}}
 function deRecord(id,ok){const p=deLoadProgress(),r=p[id]||{seen:0,correct:0,wrong:0};r.seen++;if(ok){r.correct++;r.wrong=Math.max(0,r.wrong-1)}else r.wrong++;p[id]=r;deSaveProgress(p);updateGermanDash()}
 function updateGermanDash(){const p=deLoadProgress(),vals=Object.values(p);const seen=vals.filter(x=>x.seen>0).length,ans=vals.reduce((s,x)=>s+x.seen,0),cor=vals.reduce((s,x)=>s+x.correct,0),weak=vals.filter(x=>x.wrong>=2).length;$('deStudied').textContent=seen;$('deAcc').textContent=ans?Math.round(cor/ans*100)+'%':'—';$('deWeak').textContent=weak}
-function initGerman(){if($('deStart')._wired){refreshGermanVoiceUI(true);return}$('deStart')._wired=1;$('deStart').onclick=startGerman;$('deNext').onclick=nextGerman;$('deSkip').onclick=()=>{if(!deQueue.length)return;deRecord(deQueue[dePos].id,false);nextGerman(true)};$('dePlay').onclick=()=>{if(deCurrent?.kind==='listen')playGermanListening();else if(deCurrent?.speak)deSpeak(deCurrent.speak)};$('deAgain').onclick=()=>{$('deResult').classList.add('hidden');$('deStart').classList.remove('hidden')};$('deMode').onchange=syncGermanCats;$('deVoiceSelect').onchange=()=>{try{localStorage.setItem(DE_VOICE_KEY,$('deVoiceSelect').value)}catch(e){};refreshGermanVoiceUI(true);testGermanVoice()};$('deVoiceTest').onclick=testGermanVoice;$('deVoiceReload').onclick=()=>{refreshGermanVoiceUI(true);$('deAudioStatus').textContent='ドイツ語音声一覧を更新しました。'};syncGermanCats();updateGermanDash();refreshGermanVoiceUI(true)}
+function initGerman(){if($('deStart')._wired){refreshGermanVoiceUI(true);refreshGermanVoicesAsync(false);return}$('deStart')._wired=1;$('deStart').onclick=startGerman;$('deNext').onclick=nextGerman;$('deSkip').onclick=()=>{if(!deQueue.length)return;deRecord(deQueue[dePos].id,false);nextGerman(true)};$('dePlay').onclick=()=>{if(deCurrent?.kind==='listen')playGermanListening();else if(deCurrent?.speak)deSpeak(deCurrent.speak)};$('deAgain').onclick=()=>{$('deResult').classList.add('hidden');$('deStart').classList.remove('hidden')};$('deMode').onchange=syncGermanCats;$('deVoiceSelect').onchange=()=>{try{localStorage.setItem(DE_VOICE_KEY,$('deVoiceSelect').value)}catch(e){};refreshGermanVoiceUI(true);testGermanVoice()};$('deVoiceTest').onclick=testGermanVoice;$('deVoiceReload').onclick=()=>{if($('deAudioStatus'))$('deAudioStatus').textContent='ドイツ語音声を再検索しています…';refreshGermanVoicesAsync(true)};syncGermanCats();updateGermanDash();refreshGermanVoiceUI(true);refreshGermanVoicesAsync(false)}
 function syncGermanCats(){const mode=$('deMode').value,sel=$('deCat'),prev=sel.value;const vals=mode==='grammar'?['all','動詞活用','助動詞','語順','4格','3格','前置詞','分離動詞','過去形','従属節','否定','所有冠詞','疑問文','比較級']:['all','基礎','日常','旅行','仕事','技術'];sel.innerHTML=vals.map(v=>`<option value="${v}">${v==='all'?(mode==='grammar'?'全文法':'全分野'):v}</option>`).join('');if(vals.includes(prev))sel.value=prev}
 function germanPool(){const mode=$('deMode').value;let pool=mode==='vocab'?DE_VOCAB_BANK:mode==='grammar'?DE_GRAMMAR.map((q,i)=>({id:`deg-${i}`,kind:'grammar',level:q.level,cat:q.cat,q:q.q,correct:q.choices[q.a],d:q.choices.filter((_,j)=>j!==q.a),ex:q.exp,speak:(q.choices[q.a]||'')})):mode==='dialog'?DE_DIALOG:DE_LISTEN;const level=$('deLevel').value,cat=$('deCat').value;if(level!=='all')pool=pool.filter(x=>x.level===level);if(cat!=='all')pool=pool.filter(x=>(mode==='grammar'?x.cat:normalizeDECat(x))===cat);return pool}
 function weightedGermanSample(pool,n){const pri=$('dePriority').value,p=deLoadProgress();let arr=[...pool];if(pri==='new')arr.sort((a,b)=>((p[a.id]?.seen||0)-(p[b.id]?.seen||0))||Math.random()-.5);else if(pri==='weak')arr.sort((a,b)=>((p[b.id]?.wrong||0)-(p[a.id]?.wrong||0))||Math.random()-.5);else arr=deShuffle(arr);return arr.slice(0,Math.min(n,arr.length))}
@@ -1588,7 +1589,7 @@ function renderGerman(){deCurrent=deQueue[dePos];deLocked=false;$('deNum').textC
 }
 function answerGerman(btn,ok){if(deLocked)return;deLocked=true;if(ok)deCorrect++;deRecord(deCurrent.id,ok);[...$('deChoices').children].forEach((b,i)=>{b.disabled=true;if(deCurrentChoices[i].ok)b.classList.add('correct')});if(!ok)btn.classList.add('wrong');$('deScore').textContent=`正解 ${deCorrect}`;let body='';if(deCurrent.kind==='dialog'||deCurrent.kind==='listen'){body=`<b>Question:</b> ${esc(deCurrent.q)}<br><b>Best response:</b> ${esc(deCurrent.a)}`;if(deCurrent.kind==='listen'){const all=deCurrentChoices.map((c,i)=>`<div><b>${String.fromCharCode(65+i)}.</b> ${esc(c.t)}${c.ok?' ✓':''}</div>`).join('');$('deTranscript').innerHTML=`<b>${esc(deCurrent.q)}</b>${all}`;$('deTranscript').classList.remove('hidden')}}else body=deCurrent.ex;$('deExplain').className='explainbox '+(ok?'good':'bad');$('deExplain').innerHTML=`<b>${ok?'正解':'不正解'}</b><br>${body}`;$('deExplain').classList.remove('hidden');$('deNext').disabled=false}
 function nextGerman(skipped=false){if(!skipped&&!deLocked)return;if(dePos<deQueue.length-1){dePos++;renderGerman()}else{window.speechSynthesis?.cancel?.();$('deTrain').classList.add('hidden');$('deResult').classList.remove('hidden');const pct=Math.round(deCorrect/deQueue.length*100);$('dePct').textContent=pct+'%';$('deResultMsg').textContent=pct>=90?'かなり安定しています。次はA2または苦手優先へ。':pct>=70?'基礎は良好です。間違えた項目を苦手優先で復習すると効率的です。':'未出題優先で基礎を回し、同じ項目を音声でも確認してください。'} }
-const DE_VOICE_KEY='german_voice_v20';
+const DE_VOICE_KEY='german_voice_v21';
 function germanVoiceId(v){return String(v?.voiceURI||`${v?.name||''}|${v?.lang||''}`)}
 function germanVoiceScore(v){
   const n=String(v?.name||'').toLowerCase(), uri=String(v?.voiceURI||'').toLowerCase(), l=String(v?.lang||'').toLowerCase();
@@ -1615,27 +1616,45 @@ function selectedGermanVoice(){
   }
   return vs[0];
 }
-function germanVoiceQuality(v){
-  if(!v)return {cls:'bad',label:'ドイツ語音声が見つかりません。端末に German / Deutsch 音声を追加してから「音声一覧を更新」を押してください。'};
+function germanSpeechSupported(){return 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window}
+function germanVoiceQuality(v,voiceCount=rankedGermanVoices().length){
+  if(!germanSpeechSupported())return {cls:'bad',label:'このブラウザでは Web Speech API の読み上げを利用できません。'};
+  if(!v && !voiceCount)return {cls:'warn',label:'Chrome の音声一覧には German が出ていません。v21 はブラウザ自動（de-DE）で再生を試せます。「声を試す」を押してください。'};
   const sc=germanVoiceScore(v), name=v.name||'German voice', lang=v.lang||'de';
   if(sc>=260)return {cls:'good',label:`高品質候補: ${name} (${lang})`};
   if(sc>=150)return {cls:'good',label:`ドイツ語音声: ${name} (${lang})`};
-  return {cls:'warn',label:`使用可能: ${name} (${lang})。かなり機械的なら、別の声を選ぶか端末側に高品質なGerman音声を追加してください。`};
+  return {cls:'warn',label:`使用可能: ${name} (${lang})。機械的なら別の声を選ぶか、端末のTTS設定でGerman音声データを追加してください。`};
 }
 function refreshGermanVoiceUI(preserve=true){
   const sel=$('deVoiceSelect'); if(!sel)return;
   let pref='auto'; try{pref=localStorage.getItem(DE_VOICE_KEY)||'auto'}catch(e){}
   const vs=rankedGermanVoices();
-  sel.innerHTML='<option value="auto">自動（高品質優先）</option>'+vs.map(v=>{
+  sel.innerHTML='<option value="auto">自動（de-DE / 高品質優先）</option>'+vs.map(v=>{
     const sc=germanVoiceScore(v), mark=sc>=260?' ★高品質':sc<80?' △':'', id=esc(germanVoiceId(v));
     return `<option value="${id}">${esc(v.name||'German voice')} [${esc(v.lang||'de')}]${mark}</option>`;
   }).join('');
   if(preserve && pref!=='auto' && [...sel.options].some(o=>o.value===pref))sel.value=pref; else sel.value='auto';
-  const v=selectedGermanVoice(), q=germanVoiceQuality(v), status=$('deVoiceQuality');
-  $('deVoice').textContent=v?.name||'未検出';
+  const v=selectedGermanVoice(), q=germanVoiceQuality(v,vs.length), status=$('deVoiceQuality');
+  $('deVoice').textContent=v?.name||'Auto de-DE';
   if(status){status.className=`mini de-voice-quality ${q.cls}`;status.textContent=q.label;}
-  sel.disabled=!vs.length;
-  if($('deVoiceTest'))$('deVoiceTest').disabled=!vs.length;
+  // Even when getVoices() exposes no German voice, keep browser auto fallback usable.
+  sel.disabled=!germanSpeechSupported();
+  if($('deVoiceTest'))$('deVoiceTest').disabled=!germanSpeechSupported();
+}
+let deVoiceRefreshSeq=0;
+function refreshGermanVoicesAsync(showMessage=false){
+  const seq=++deVoiceRefreshSeq;
+  const delays=[0,120,400,900,1800,3200];
+  delays.forEach((ms,i)=>setTimeout(()=>{
+    if(seq!==deVoiceRefreshSeq)return;
+    // getVoices() is intentionally touched on each retry because Chrome may populate it asynchronously.
+    try{speechSynthesis.getVoices()}catch(e){}
+    refreshGermanVoiceUI(true);
+    if(showMessage && i===delays.length-1 && $('deAudioStatus')){
+      const n=rankedGermanVoices().length;
+      $('deAudioStatus').textContent=n?`ドイツ語音声を ${n} 件検出しました。`:'個別音声は一覧に出ていません。ブラウザ自動（de-DE）で試聴できます。';
+    }
+  },ms));
 }
 function updateGermanVoiceLabel(){refreshGermanVoiceUI(true)}
 function dePrepareSpeechText(text){
@@ -1648,24 +1667,32 @@ function makeGermanUtterance(text,voice){
   u.pitch=.98; u.volume=1; if(voice)u.voice=voice; return u;
 }
 function deSpeak(text,onend,opts={}){
-  if(!('speechSynthesis' in window)){if($('deAudioStatus'))$('deAudioStatus').textContent='この端末では音声を利用できません';return false}
+  if(!germanSpeechSupported()){if($('deAudioStatus'))$('deAudioStatus').textContent='このブラウザでは音声を利用できません';return false}
   const v=selectedGermanVoice();
-  if(!v){
-    refreshGermanVoiceUI(true);
-    if($('deAudioStatus'))$('deAudioStatus').textContent='ドイツ語音声が端末にありません。German / Deutsch 音声を追加してください。';
-    return false;
-  }
-  const u=makeGermanUtterance(text,v);
+  const u=makeGermanUtterance(text,v); // voice is optional: the UA should choose a suitable de-DE default.
   if(onend)u.onend=onend;
-  u.onerror=()=>{if($('deAudioStatus'))$('deAudioStatus').textContent='音声再生に失敗しました。別のドイツ語音声を選んでください。'};
+  u.onerror=(ev)=>{
+    const code=String(ev?.error||'');
+    let msg='音声再生に失敗しました。';
+    if(code==='language-unavailable'||code==='synthesis-unavailable'){
+      msg='ドイツ語TTSが端末側で利用できません。表示言語ではなく、テキスト読み上げ（TTS）のGerman音声データを追加してください。';
+    }else if(code==='network'){
+      msg='オンライン音声の取得に失敗しました。通信を確認するか、端末内のGerman TTS音声を追加してください。';
+    }else if(code==='voice-unavailable'){
+      msg='選択した音声が利用できません。自動（de-DE）に戻して試してください。';
+    }else if(code){msg+=` (${code})`}
+    if($('deAudioStatus'))$('deAudioStatus').textContent=msg;
+    refreshGermanVoicesAsync(false);
+  };
   if(opts.cancel!==false)speechSynthesis.cancel();
   speechSynthesis.speak(u); return true;
 }
 function testGermanVoice(){
+  if(!germanSpeechSupported()){refreshGermanVoiceUI(true);return}
   const v=selectedGermanVoice();
-  if(!v){refreshGermanVoiceUI(true);return}
-  $('deAudioStatus').textContent=`試聴中: ${v.name}`;
-  deSpeak('Guten Morgen. Können Sie bitte den Liefertermin bestätigen?',()=>{$('deAudioStatus').textContent=`試聴完了: ${v.name}`});
+  const label=v?.name||'ブラウザ自動 de-DE';
+  $('deAudioStatus').textContent=`試聴中: ${label}`;
+  deSpeak('Guten Morgen. Können Sie bitte den Liefertermin bestätigen?',()=>{$('deAudioStatus').textContent=`試聴完了: ${label}`});
 }
 function playGermanListening(){if(!deCurrent)return;const isDialog=deCurrent.kind==='listen';if(!isDialog){$('deAudioStatus').textContent='単語を再生します';deSpeak(deCurrent.speak,()=>{$('deAudioStatus').textContent='再生完了'});return}const parts=[deCurrent.q,...deCurrentChoices.flatMap((c,i)=>[String.fromCharCode(65+i),c.t])];let i=0;$('deAudioStatus').textContent='再生中: Frage → A → B → C';const next=()=>{if(i>=parts.length){$('deAudioStatus').textContent='再生完了';return}deSpeak(parts[i++],()=>setTimeout(next,190))};next()}
 
